@@ -103,7 +103,7 @@
                                 Sudah punya akun?
                                 <a href="{{ route('login') }}" class="font-medium text-[#FFD66B] hover:text-[#fbc93d]
                                                                         transition duration-200 ml-1">
-                                    Sign In
+                                    LogIn
                                 </a>
                             </p>
                         </div>

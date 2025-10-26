@@ -10,13 +10,13 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    @vite('resources/css/app.css')
     <!-- Custom Styles -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'noto': ['Noto Sans', 'sans-serif'];
         }
 
         .blur-background::before {
@@ -45,7 +45,6 @@
             background: rgba(255, 255, 255, 0.95);
         }
 
-        /* Style untuk button login */
         .custom-login-btn {
             background-color: #FFD66B !important;
             color: #1f2937;
@@ -65,7 +64,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 font-noto">
     @yield('content')
 </body>
 </html>
