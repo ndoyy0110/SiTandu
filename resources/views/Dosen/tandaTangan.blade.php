@@ -1,10 +1,10 @@
 @extends('layouts.template')
-@section('title', 'Login - SITandu')
+@section('title', 'Tanda Tangan - SITandu')
 @section('content')
     <!-- Main Content -->
     <main class="justify-start max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row gap-6">
-            <!-- Left kiri -->
+            <!--  kiri -->
             <div class="flex-1 space-y-6">
                 <div class="flex justify-between items-center mb-4 relative">
                     <h2 class="text-2xl font-bold text-[#4D4D4D]">Permintaan Tanda Tangan</h2>
@@ -263,7 +263,7 @@
                 </div>
                 {{-- tanggal --}}
                 <div class="flex-1 space-y-6">
-                    <!-- Permintaan Janji Temu -->
+                    <!-- Permintaan atanda tangan -->
                     <div class="flex justify-between items-center mb-4">
                         <h2 class="text-[20px] text-[#4D4D4D]">Kamis, 18 September 2025</h2>
                     </div>
@@ -498,7 +498,7 @@
                 </div>
                 <!-- tanggal -->
                 <div class="flex-1 space-y-6">
-                    <!-- Permintaan Janji Temu -->
+                    <!-- Permintaan tanda tangan -->
                     <div class="flex justify-between items-center mb-4">
                         <h2 class="text-[20px] text-[#4D4D4D]">Jumat, 19 September 2025</h2>
                     </div>

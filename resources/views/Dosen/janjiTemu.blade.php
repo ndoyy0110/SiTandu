@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title', 'Login - SITandu')
+@section('title', 'Janji Temu - SITandu')
 @section('content')
     <!-- Main Content -->
     <main class="justify-start max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -609,7 +609,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Input untuk ruangan alternatif -->
+                                <!-- alternatif -->
                                 <div id="alternatif-input" class="hidden mt-4">
                                     <label class="block text-sm font-medium text-[#4D4D4D] mb-2">Masukkan nama
                                         ruangan</label>
@@ -618,7 +618,7 @@
                                         placeholder="Contoh: Lab Komputer, Ruang Baca, dll.">
                                 </div>
 
-                                <!-- Display ruangan yang dipilih -->
+                                <!-- ruangan yang dipilih -->
                                 <div id="ruanganTerpilih"
                                     class="hidden mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                                     <div class="flex items-center justify-between">

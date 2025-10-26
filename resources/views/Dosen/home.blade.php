@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title', 'Login - SITandu')
+@section('title', 'Home - SITandu')
 @section('content')
     <!-- Main Content -->
     <main class="justify-start max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -446,7 +446,7 @@
 
 
 
-            <!-- Right Column - Sidebar Kanan -->
+            <!-- Kanan -->
             <div class="w-full lg:w-80 space-y-6">
                 <!-- Calendar -->
                 <div class="bg-white rounded-lg shadow-custom p-6">
@@ -474,7 +474,7 @@
                     </div>
 
                     <div class="grid grid-cols-7 gap-1 text-center">
-                        <!-- Calendar dates -->
+                        <!-- kalender -->
                         <div class="p-2">1</div>
                         <div class="p-2">2</div>
                         <div class="p-2">3</div>
@@ -513,7 +513,7 @@
                     </div>
                 </div>
 
-                <!-- Recent Activities -->
+                <!-- riwayat -->
                 <div class="bg-white rounded-lg shadow-custom p-6">
                     <h3 class="text-lg font-bold text-[#4D4D4D] mb-4">Aktivitas Terbaru</h3>
                     {{-- card 1 --}}
@@ -572,7 +572,7 @@
                     </div>
                 </div>
 
-                <!-- Quick Actions -->
+                <!-- bantuan -->
                 <div class="bg-white rounded-lg shadow-custom p-6">
                     <h3 class="text-lg font-bold text-[#4D4D4D] mb-4">Butuh Bantuan?</h3>
                     <p class="text-gray-600 mb-4">Ada pertanyaan mengenai sistem? Hubungi admin atau lihat panduan
@@ -768,7 +768,7 @@
                             </div>
                         </div>
 
-                        <!-- Input untuk ruangan alternatif -->
+                        <!-- ruangan alternatif -->
                         <div id="alternatif-input" class="hidden mt-4">
                             <label class="block text-sm font-medium text-[#4D4D4D] mb-2">Masukkan nama ruangan</label>
                             <input type="text" id="custom-ruangan-input"
@@ -776,7 +776,7 @@
                                 placeholder="Contoh: Lab Komputer, Ruang Baca, dll.">
                         </div>
 
-                        <!-- Display ruangan yang dipilih -->
+                        <!-- ruangan yang dipilih -->
                         <div id="ruanganTerpilih" class="hidden mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">

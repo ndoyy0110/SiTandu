@@ -1,21 +1,21 @@
 // resources/js/tandaTangan.js
-console.log('✅ tandaTangan.js loaded');
+console.log(' tandaTangan.js loaded');
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🔄 DOM Content Loaded');
+    console.log(' DOM Content Loaded');
 
     // Initialize dropdown
     initializeDropdown();
 
-    // Initialize approve modal untuk tanda tangan
+    // Initialize approve modal tanda tangan
     initializeApproveModalttd();
 
-    // Initialize revisi modal untuk tanda tangan
+    // Initialize revisi modal tanda tangan
     initializeRevisiModalttd();
 });
 
 function initializeDropdown() {
-    console.log('🔄 Initializing dropdown...');
+    console.log(' Initializing dropdown...');
 
     const sortMenuButton = document.getElementById('sort-menu-button');
     const sortMenu = document.getElementById('sort-menu');
@@ -28,11 +28,11 @@ function initializeDropdown() {
     if (sortMenuButton && sortMenu) {
         sortMenuButton.addEventListener('click', function(e) {
             e.stopPropagation();
-            console.log('🎯 Dropdown button clicked');
+            console.log(' Dropdown button clicked');
             sortMenu.classList.toggle('hidden');
         });
 
-        // Close dropdown when clicking outside
+        // Close dropdown
         document.addEventListener('click', function(event) {
             if (!sortMenuButton.contains(event.target) && !sortMenu.contains(event.target)) {
                 sortMenu.classList.add('hidden');
@@ -54,7 +54,7 @@ function initializeDropdown() {
 }
 
 function initializeApproveModalttd() {
-    console.log('🔄 Initializing approve modal untuk TTD...');
+    console.log(' Initializing approve modal TTD...');
 
     const approveButtons = document.querySelectorAll('.btn-setujui-ttd');
     const approveModalttd = document.getElementById('approveModalttd');
@@ -63,13 +63,13 @@ function initializeApproveModalttd() {
     console.log('Approve TTD modal found:', !!approveModalttd);
 
     if (!approveModalttd || approveButtons.length === 0) {
-        console.log('❌ Modal TTD atau tombol tidak ditemukan');
+        console.log(' Modal TTD atau tombol tidak ditemukan');
         return;
     }
 
     approveButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            console.log('🎯 Tombol Setujui TTD diklik!');
+            console.log(' Tombol Setujui TTD diklik!');
             approveModalttd.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         });
@@ -92,7 +92,7 @@ function setupApproveModalFunctionality() {
     console.log('Submit button found:', !!submitApprove);
 
     function closeModal() {
-        console.log('🔒 Closing approve modal');
+        console.log(' Closing approve modal');
         if (approveModalttd) {
             approveModalttd.classList.add('hidden');
         }
@@ -105,13 +105,13 @@ function setupApproveModalFunctionality() {
         }
     }
 
-    // Event listener untuk tombol batal
+    // Event listener tombol batal
     if (cancelApprove) {
         cancelApprove.addEventListener('click', closeModal);
-        console.log('✅ Cancel button event listener added');
+        console.log(' Cancel button event listener added');
     }
 
-    // Close modal when clicking outside
+    // Close modal
     if (approveModalttd) {
         approveModalttd.addEventListener('click', function(e) {
             if (e.target === approveModalttd) {
@@ -120,7 +120,7 @@ function setupApproveModalFunctionality() {
         });
     }
 
-    // Close modal with Escape key
+    // Close modal
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && approveModalttd && !approveModalttd.classList.contains('hidden')) {
             closeModal();
@@ -205,13 +205,12 @@ function setupApproveModalFunctionality() {
         });
     }
 
-    console.log('✅ Approve modal functionality setup completed');
+    console.log(' Approve modal functionality setup completed');
 }
 
 function initializeRevisiModalttd() {
-    console.log('🔄 Initializing revisi modal untuk TTD...');
+    console.log(' Initializing revisi modal TTD...');
 
-    // PERBAIKAN: Gunakan class btn-revisi (dengan dash)
     const revisiButtons = document.querySelectorAll('.btn-revisi');
     const revisiModalttd = document.getElementById('revisiModalttd');
 
@@ -219,13 +218,13 @@ function initializeRevisiModalttd() {
     console.log('Revisi TTD modal found:', !!revisiModalttd);
 
     if (!revisiModalttd || revisiButtons.length === 0) {
-        console.log('❌ Modal revisi TTD atau tombol tidak ditemukan');
+        console.log(' Modal revisi TTD atau tombol tidak ditemukan');
         return;
     }
 
     revisiButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            console.log('🎯 Tombol Revisi TTD diklik!');
+            console.log(' Tombol Revisi TTD diklik!');
             revisiModalttd.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         });
@@ -245,7 +244,7 @@ function setupRevisiModalFunctionality() {
     console.log('Alasan revisi input found:', !!alasanRevisiInput);
 
     function closeModal() {
-        console.log('🔒 Closing revisi modal');
+        console.log(' Closing revisi modal');
         if (revisiModalttd) {
             revisiModalttd.classList.add('hidden');
         }
@@ -303,7 +302,7 @@ function setupRevisiModalFunctionality() {
         });
     }
 
-    console.log('✅ Revisi modal functionality setup completed');
+    console.log(' Revisi modal functionality setup completed');
 }
 
 function applySorting(sortType) {

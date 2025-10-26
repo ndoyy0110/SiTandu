@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title', 'Login - SITandu')
+@section('title', 'Jadwal Mendatang - SITandu')
 @section('content')
     <!-- Main Content -->
     <main class="justify-start max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Right Column - Sidebar Kanan -->
+            <!-- Kanan -->
             <div class="w-full lg:w-80 space-y-6">
                 <div class="flex justify-start relative">
                     <button id="calendar-button"
@@ -143,7 +143,7 @@
                             </button>
                         </div>
 
-                        <!-- Calendar Days -->
+                        <!-- hari -->
                         <div class="grid grid-cols-7 gap-1 text-center mb-2">
                             <div class="text-gray-500 text-xs font-medium py-1">Min</div>
                             <div class="text-gray-500 text-xs font-medium py-1">Sen</div>
@@ -154,9 +154,9 @@
                             <div class="text-gray-500 text-xs font-medium py-1">Sab</div>
                         </div>
 
-                        <!-- Calendar Dates -->
+                        <!-- kalender -->
                         <div class="grid grid-cols-7 gap-1 text-center">
-                            <!-- Previous month dates -->
+                            <!-- bulan -->
                             <div class="text-gray-400 text-xs py-2">25</div>
                             <div class="text-gray-400 text-xs py-2">26</div>
                             <div class="text-gray-400 text-xs py-2">27</div>
@@ -198,7 +198,7 @@
                             <div class="text-gray-600 text-xs py-2">30</div>
                         </div>
 
-                        <!-- Today Button -->
+                        <!-- hari ini-->
                         <div class="mt-4 pt-3 border-t border-gray-200">
                             <button class="w-full bg-[#F1F1F1] text-[#4D4D4D] py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition duration-200">
                                 Hari Ini
@@ -210,36 +210,5 @@
             </div>
         </div>
     </main>
-
-    <script>
-        // Calendar Dropdown Toggle
-        document.getElementById('calendar-button').addEventListener('click', function() {
-            const calendarDropdown = document.getElementById('calendar-dropdown');
-            const userMenu = document.getElementById('user-menu');
-
-            // Toggle calendar dropdown
-            calendarDropdown.classList.toggle('hidden');
-
-            // Close user menu if open
-            userMenu.classList.add('hidden');
-        });
-
-        // Select date functionality
-        document.querySelectorAll('#calendar-dropdown .text-gray-600').forEach(date => {
-            date.addEventListener('click', function() {
-                const selectedDate = this.textContent;
-                const monthYear = 'September 2025';
-                const dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-                const dateObj = new Date(2025, 8, parseInt(selectedDate)); // September is month 8 (0-indexed)
-                const dayName = dayNames[dateObj.getDay()];
-
-                // Update the button text
-                document.getElementById('calendar-button').innerHTML =
-                    `${dayName}, ${selectedDate} September 2025 <img src="{{ asset('images/panah.png') }}" alt="dropdown Icon" class="w-[18px] h-[16px]">`;
-
-                // Close dropdown
-                document.getElementById('calendar-dropdown').classList.add('hidden');
-            });
-        });
-    </script>
 @endsection
+@vite(['resources/js/jadwalMendatang.js'])

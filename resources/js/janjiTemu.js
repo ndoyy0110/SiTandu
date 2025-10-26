@@ -1,8 +1,8 @@
 // resources/js/janjiTemu.js
-console.log('✅ janjiTemu.js loaded');
+console.log(' janjiTemu.js loaded');
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🔄 Initializing janji temu modal...');
+    console.log(' Initializing janji temu modal...');
     initializeJanjiTemuModal();
 });
 
@@ -14,13 +14,13 @@ function initializeJanjiTemuModal() {
     console.log('Janji Temu modal found:', !!approveModal);
 
     if (!approveModal || approveButtons.length === 0) {
-        console.log('❌ Modal atau tombol tidak ditemukan');
+        console.log(' Modal atau tombol tidak ditemukan');
         return;
     }
 
     approveButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            console.log('🎯 Tombol Setujui Janji Temu diklik!');
+            console.log(' Tombol Setujui Janji Temu diklik!');
             approveModal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         });
@@ -51,7 +51,7 @@ function setupJanjiTemuModalFunctionality() {
             ruanganDropdownMenu.classList.toggle('hidden');
         });
 
-        // Close dropdown when clicking outside
+        // Close dropdown
         document.addEventListener('click', function(event) {
             if (!ruanganDropdownButton.contains(event.target) && !ruanganDropdownMenu.contains(event.target)) {
                 ruanganDropdownMenu.classList.add('hidden');
@@ -59,7 +59,7 @@ function setupJanjiTemuModalFunctionality() {
         });
     }
 
-    // Event listener untuk opsi ruangan
+    // Event listener opsi ruangan
     ruanganOptions.forEach(option => {
         option.addEventListener('click', function() {
             const ruanganValue = this.getAttribute('data-ruangan');
@@ -73,7 +73,7 @@ function setupJanjiTemuModalFunctionality() {
             // Sembunyikan dropdown
             ruanganDropdownMenu.classList.add('hidden');
 
-            // Handle opsi alternatif
+            // alternatif
             if (ruanganValue === 'alternatif') {
                 alternatifInput.classList.remove('hidden');
                 ruanganTerpilih.classList.add('hidden');
@@ -87,7 +87,7 @@ function setupJanjiTemuModalFunctionality() {
         });
     });
 
-    // Event listener untuk input custom ruangan
+    // Event listener input custom ruangan
     if (customRuanganInput) {
         customRuanganInput.addEventListener('input', function() {
             selectedRuangan = this.value.trim();
@@ -100,10 +100,10 @@ function setupJanjiTemuModalFunctionality() {
         });
     }
 
-    // Event listener untuk ruangan terpilih (bisa diklik untuk mengubah)
+    // Event listener ruangan terpilih
     if (ruanganTerpilih) {
         ruanganTerpilih.addEventListener('click', function() {
-            console.log('🔄 Mengubah pilihan ruangan');
+            console.log(' Mengubah pilihan ruangan');
             this.classList.add('hidden');
             resetRuanganSelection();
         });
@@ -117,7 +117,7 @@ function setupJanjiTemuModalFunctionality() {
     }
 
     function closeModal() {
-        console.log('🔒 Closing janji temu modal');
+        console.log(' Closing janji temu modal');
         approveModal.classList.add('hidden');
         document.body.style.overflow = 'auto';
         resetRuanganSelection();
@@ -128,12 +128,12 @@ function setupJanjiTemuModalFunctionality() {
         }
     }
 
-    // Event listener untuk tombol batal
+    // Event listener tombol batal
     if (cancelApprove) {
         cancelApprove.addEventListener('click', closeModal);
     }
 
-    // Close modal when clicking outside
+    // Close modal
     if (approveModal) {
         approveModal.addEventListener('click', function(e) {
             if (e.target === approveModal) {
@@ -142,7 +142,7 @@ function setupJanjiTemuModalFunctionality() {
         });
     }
 
-    // Close modal with Escape key
+    // Close modal
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && approveModal && !approveModal.classList.contains('hidden')) {
             closeModal();
@@ -159,7 +159,7 @@ function setupJanjiTemuModalFunctionality() {
                 return;
             }
 
-            // Show loading state
+            //loading state
             this.innerHTML = `
                 <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -181,5 +181,5 @@ function setupJanjiTemuModalFunctionality() {
         });
     }
 
-    console.log('✅ Janji temu modal functionality setup completed');
+    console.log(' Janji temu modal functionality setup completed');
 }
