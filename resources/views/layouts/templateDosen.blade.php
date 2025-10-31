@@ -33,19 +33,19 @@
                     class="flex flex-col md:grid-cols-3 py-4 md:py-0 md:h-25 gap-4 md:gap-0  md:flex justify-center items-center flex-1">
                     <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
                         <a href="{{ route('dosen.home') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap">
+                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('dosen.home') ? 'bg-[#FFDA7A]' : '' }}">
                             Home
                         </a>
                         <a href="{{ route('dosen.janjiTemu') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap">
+                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('dosen.janjiTemu') ? 'bg-[#FFDA7A]' : '' }}">
                             Janji Temu
                         </a>
                         <a href="{{ route('dosen.tandaTangan') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap">
+                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('dosen.tandaTangan') ? 'bg-[#FFDA7A]' : '' }}">
                             Tanda Tangan
                         </a>
                         <a href="{{ route('dosen.jadwalMendatang') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap">
+                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-2 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('dosen.jadwalMendatang') ? 'bg-[#FFDA7A]' : '' }}">
                             Jadwal Mendatang
                         </a>
                     </div>

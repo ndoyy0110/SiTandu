@@ -17,10 +17,10 @@
             </div>
         </div>
 
-        <!-- Right Section (Login Card) -->
+        <!-- Right Section (Register Card) -->
         <div class="flex-1 flex items-center justify-center p-4 lg:p-8">
             <div class="w-full max-w-md">
-                <!-- Login Card -->
+                <!-- Register Card -->
                 <div class="login-card rounded-2xl shadow-2xl p-8 bg-white">
 
                     <!-- Section Header -->
@@ -29,69 +29,85 @@
                         <p class="text-gray-600 mt-2">Akun SITandu Anda</p>
                     </div>
 
-                    <!-- Login Form -->
-                    <form class="space-y-6" action="{{ route('RegisterMahasiswa') }}" method="POST">
+                    <!-- Register Form -->
+                    <form class="space-y-6" action="{{ route('register') }}" method="POST">
                         @csrf
 
-                        <!-- Email Field -->
+                        <!-- Nama Field -->
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                                Email
+                            <label for="nama" class="block text-sm font-medium text-gray-700 mb-2">
+                                Nama
                             </label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <i class="fas fa-envelope text-gray-400"></i>
+                                    <i class="fas fa-user text-gray-400"></i>
                                 </div>
                                 <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
+                                    id="nama"
+                                    name="nama"
+                                    type="text"
                                     required
                                     class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl
                                            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
                                            transition duration-200 bg-white"
-                                    placeholder="@mail.ugm.ac.id"
+                                    placeholder="Masukkan Nama Anda"
                                 >
                             </div>
                         </div>
 
-                        <!-- Password Field -->
+                        <!-- NIM Field -->
                         <div>
-                            <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
-                                Password
+                            <label for="nim" class="block text-sm font-medium text-gray-700 mb-2">
+                                NIM
                             </label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <i class="fas fa-lock text-gray-400"></i>
+                                    <i class="fas fa-id-card text-gray-400"></i>
                                 </div>
                                 <input
-                                    id="password"
-                                    name="password"
-                                    type="password"
+                                    id="nim"
+                                    name="nim"
+                                    type="text"
                                     required
-                                    class="block w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl
+                                    class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl
                                            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
                                            transition duration-200 bg-white"
-                                    placeholder="Insert Password"
+                                    placeholder="Masukkan NIM Anda"
                                 >
-                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                                    <button type="button" class="text-gray-400 hover:text-gray-600 focus:outline-none toggle-password">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
                             </div>
                         </div>
 
-                        <!-- Lanjutkan Button -->
-                        <button onclick="window.location.href='{{ route('mahasiswa.permintaanJT') }}'"
+                        <!-- Angkatan Field -->
+                        <div>
+                            <label for="angkatan" class="block text-sm font-medium text-gray-700 mb-2">
+                                Angkatan
+                            </label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-graduation-cap text-gray-400"></i>
+                                </div>
+                                <input
+                                    id="angkatan"
+                                    name="angkatan"
+                                    type="text"
+                                    required
+                                    class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl
+                                           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                                           transition duration-200 bg-white"
+                                    placeholder="Masukkan Angkatan Anda"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Register Button -->
+                        <button
                             type="submit"
                             class="w-full flex justify-center py-3 px-4 border border-transparent
                                    rounded-xl shadow-sm text-sm font-medium
                                    custom-login-btn transition duration-200"
                         >
                             <span class="flex items-center">
-                                <i class="fas fa-sign-in-alt mr-2"></i>
-                                Lanjutkan
+                                Register
                             </span>
                         </button>
                     </form>
@@ -121,22 +137,4 @@
     </div>
 </div>
 
-<script>
-    // Toggle password visibility
-    document.addEventListener('DOMContentLoaded', function() {
-        const togglePassword = document.querySelector('.toggle-password');
-        const password = document.getElementById('password');
-
-        if (togglePassword && password) {
-            togglePassword.addEventListener('click', function() {
-                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                password.setAttribute('type', type);
-
-                const icon = this.querySelector('i');
-                icon.classList.toggle('fa-eye');
-                icon.classList.toggle('fa-eye-slash');
-            });
-        }
-    });
-</script>
 @endsection

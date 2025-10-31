@@ -28,4 +28,8 @@ class AuthController extends Controller
     {
         return view('auth.ResetPassword');
     }
+    public function showRegisterMahasiswa(Request $request)
+    {
+        return view('auth.registerMahasiswa');
+    }
 }

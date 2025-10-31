@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.templateDosen')
 @section('title', 'Janji Temu - SITandu')
 @section('content')
     <!-- Main Content -->
@@ -658,4 +658,4 @@
         </div>
     </main>
 @endsection
-@vite(['resources/js/janjiTemu.js'])
+@vite(['resources/js/Dosen/janjiTemu.js'])

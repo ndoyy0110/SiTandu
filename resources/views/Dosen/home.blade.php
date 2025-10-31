@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.templateDosen')
 @section('title', 'Home - SITandu')
 @section('content')
     <!-- Main Content -->
@@ -349,7 +349,7 @@
                     <div class="bg-white border-l-4 border-[#FFD66B] pl-4 py-3 gap-4 mb-4">
                         <div class="flex items-center gap-2 mb-3">
                             <span class="bg-[#5CBDB9] rounded-lg text-[14px] text-white px-3 py-1">Janji Temu</span>
-                            <span class="font-bold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
+                            <span class="font-semibold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
                         </div>
 
                         <div class="space-y-2">
@@ -373,7 +373,7 @@
                     <div class="bg-white border-l-4 border-[#FFD66B] pl-4 py-3 gap-4 mb-4">
                         <div class="flex items-center gap-2 mb-3">
                             <span class="bg-[#5CBDB9] rounded-lg text-[14px] text-white px-3 py-1">Janji Temu</span>
-                            <span class="font-bold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
+                            <span class="font-semibold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
                         </div>
 
                         <div class="space-y-2">
@@ -397,7 +397,7 @@
                     <div class="bg-white border-l-4 border-[#FFD66B] pl-4 py-3 gap-4 mb-4">
                         <div class="flex items-center gap-2 mb-3">
                             <span class="bg-[#5CBDB9] rounded-lg text-[14px] text-white px-3 py-1">Janji Temu</span>
-                            <span class="font-bold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
+                            <span class="font-semibold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
                         </div>
 
                         <div class="space-y-2">
@@ -421,7 +421,7 @@
                     <div class="bg-white border-l-4 border-[#FFD66B] pl-4 py-3 gap-4 mb-4">
                         <div class="flex items-center gap-2 mb-3">
                             <span class="bg-[#5CBDB9] rounded-lg text-[14px] text-white px-3 py-1">Janji Temu</span>
-                            <span class="font-bold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
+                            <span class="font-semibold text-[16px] text-[#4D4D4D]">Bimbingan Tugas Akhir</span>
                         </div>
 
                         <div class="space-y-2">
@@ -812,5 +812,5 @@
 
     </main>
 @endsection
-@vite(['resources/js/tandaTangan.js'])
-@vite(['resources/js/janjiTemu.js'])
+@vite(['resources/js/Dosen/tandaTangan.js'])
+@vite(['resources/js/Dosen/janjiTemu.js'])

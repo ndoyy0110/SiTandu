@@ -43,7 +43,7 @@
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center md:items-start gap-10">
             <div class="max-w-4xl">
                 <h1 class="text-5xl mb-8 leading-tight font-bold">
-                    Kelola<Span class="text-[#5CBDB9]">Tanda</Span><br>
+                    Kelola <Span class="text-[#5CBDB9]">Tanda</Span><br>
                     <span class="text-[#5CBDB9]">Tangan & Janji</Span><br>
                     <span class="text-[#5CBDB9]">Temu </span>dengan<br>
                     Mudah
