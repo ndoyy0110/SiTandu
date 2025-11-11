@@ -22,4 +22,24 @@ class DosenController extends Controller
     {
         return view('Dosen.jadwalMendatang');
     }
+    public function history()
+    {
+        return view('Dosen.history');
+    }
+    public function progres()
+    {
+        return view('Dosen.history.progres');
+    }
+    public function jadwalUlang()
+    {
+        return view('Dosen.history.jadwalUlang');
+    }
+        public function revisi()
+    {
+        return view('Dosen.history.revisi');
+    }
+        public function ditolak()
+    {
+        return view('Dosen.history.ditolak');
+    }
 }

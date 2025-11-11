@@ -21,6 +21,11 @@ Route::get('/dosen/home', [DosenController::class, 'home'])->name('dosen.home');
 Route::get('/dosen/janjiTemu', [DosenController::class, 'janjiTemu'])->name('dosen.janjiTemu');
 Route::get('/dosen/tandaTangan', [DosenController::class, 'tandaTangan'])->name('dosen.tandaTangan');
 Route::get('/dosen/jadwalMendatang', [DosenController::class, 'jadwalMendatang'])->name('dosen.jadwalMendatang');
+Route::get('/dosen/history', [DosenController::class, 'history'])->name('dosen.history');
+Route::get('/dosen/progres', [DosenController::class, 'progres'])->name('dosen.progres');
+Route::get('/dosen/jadwalUlang', [DosenController::class, 'jadwalUlang'])->name('dosen.jadwalUlang');
+Route::get('/dosen/revisi', [DosenController::class, 'revisi'])->name('dosen.revisi');
+Route::get('/dosen/ditolak', [DosenController::class, 'ditolak'])->name('dosen.ditolak');
 
 Route::get('/mahasiswa/home', [MahasiswaController::class, 'home'])->name('mahasiswa.home');
 Route::get('/mahasiswa/janjiTemu', [MahasiswaController::class, 'janjiTemu'])->name('mahasiswa.janjiTemu');
