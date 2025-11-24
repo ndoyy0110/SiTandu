@@ -29,14 +29,14 @@
                         <div class="flex flex-wrap items-center gap-2 ml-0 sm:ml-2">
                             <span
                                 class="bg-white text-[#0A0A0A] px-2 sm:px-3 py-1 border border-[#0000001A] rounded-full text-xs font-medium">
-                                Tanda Tangan
+                                Janji Temu
                             </span>
-                            <span class="bg-[#FFE2E2] text-[#9F0712] px-2 sm:px-3 py-1 rounded-full text-xs font-medium">
-                                Ditolak
+                            <span class="bg-[#FEF9C2] text-[#894B00] px-3 py-1 rounded-full text-[12px] font-medium">
+                                Menunggu
                             </span>
                         </div>
                     </div>
-                    <img src="{{ asset('images/ditolak.png') }}" alt="ditolak" class="w-5 h-5 sm:w-6 sm:h-6 ml-2 flex-shrink-0">
+                    <img src="{{ asset('images/menunggu.png') }}" alt="menunggu" class="w-5 h-5 sm:w-6 sm:h-6 ml-2 flex-shrink-0">
                 </div>
                 <div class="border-t border-[#0000001A] pt-3"></div>
 
@@ -49,33 +49,15 @@
                                 <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/user.png') }}" alt="NamaIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Nama Mahasiswa</span>
+                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Nama Dosen</span>
                                 </div>
                                 <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">Budi Santoso</p>
                             </div>
                             <div class="flex flex-col">
                                 <div class="flex items-center mb-1 sm:mb-0">
-                                    <img src="{{ asset('images/dokumen.png') }}" alt="NIMIkon"
-                                        class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">NIM</span>
-                                </div>
-                                <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">20210001</p>
-                            </div>
-                            <div class="flex flex-col">
-                                <div class="flex items-center mb-1 sm:mb-0">
-                                    <img src="{{ asset('images/email.png') }}" alt="EmailIkon"
-                                        class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Email</span>
-                                </div>
-                                <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5 break-all">
-                                    budi.santoso@student.university.ac.id
-                                </p>
-                            </div>
-                            <div class="flex flex-col">
-                                <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/clock.png') }}" alt="TanggalIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Tanggal Disetujui</span>
+                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Tanggal Pengajuan</span>
                                 </div>
                                 <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">30 Oktober 2024, 10:15</p>
                             </div>
@@ -85,15 +67,56 @@
                 <div class="border-t border-[#0000001A] pt-3"></div>
 
                 <!-- Detail Janji Temu -->
-                <div class="mb-6">
-                    <h2 class="text-base sm:text-lg font-semibold text-[#101828] mb-3">Detail Janji Temu</h2>
-                    <div class="bg-[#F9FAFB] p-3 sm:p-4 rounded-lg border border-[#F9FAFB] mt-2">
-                        <p class="text-xs sm:text-sm text-gray-700 mb-2">
-                            Persetujuan proposal tugas akhir dengan judul 'Implementasi Machine Learning untuk Prediksi Nilai Mahasiswa'.
-                        </p>
+                    <div class="mb-6">
+                        <h2 class="text-base sm:text-lg font-semibold text-[#101828] mb-3">Detail Janji Temu</h2>
+                        <div class="bg-[#F9FAFB] p-3 sm:p-4 rounded-lg border border-[#F9FAFB] mt-2">
+                            <p class="text-xs sm:text-sm text-gray-700 mb-4">Diskusi mengenai rencana studi dan pemilihan mata kuliah pilihan.</p>
+
+                            <!-- Informasi Detail Konsultasi -->
+                            <div class="space-y-3 mt-4">
+                                <!-- Tanggal -->
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 mr-3 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-gray-600">Tanggal:</span>
+                                    <span class="text-sm font-medium text-gray-900 ml-2">30 Oktober 2024</span>
+                                </div>
+
+                                <!-- Waktu -->
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 mr-3 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-gray-600">Waktu:</span>
+                                    <span class="text-sm font-medium text-gray-900 ml-2">10:30 - 11:30</span>
+                                </div>
+
+                                <!-- Lokasi -->
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 mr-3 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                            </path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-gray-600">Lokasi:</span>
+                                    <span class="text-sm font-medium text-gray-900 ml-2">Ruang Dosen 301</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="border-t border-[#0000001A] pt-3"></div>
+                    <div class="border-t border-[#0000001A] pt-3"></div>
 
                 <!-- Timeline -->
                 <div class="mb-6">
@@ -107,8 +130,8 @@
                                     <div class="h-6 sm:h-8 border-l-2 border-dashed border-gray-300 mt-2"></div>
                                 </div>
                                 <div class="flex-1">
-                                    <p class="font-medium text-gray-700 text-sm sm:text-base">Dokumen Dikirim</p>
-                                    <p class="text-xs sm:text-sm text-gray-500">Dokumen PDF telah dikirim mahasiswa</p>
+                                    <p class="font-medium text-gray-700 text-sm sm:text-base">Permintaan Dikirim</p>
+                                    <p class="text-xs sm:text-sm text-gray-500">Permintaan janji temu telah Anda ajukan</p>
                                     <p class="text-xs sm:text-sm text-gray-500">30 Okt 2024, 09:30</p>
                                 </div>
                             </div>
@@ -116,54 +139,26 @@
                                 <div class="flex flex-col items-center mr-3 sm:mr-4">
                                     <img src="{{ asset('images/lihatijo.png') }}" alt="DokumenDikirimIkon"
                                         class="w-7 h-7 sm:w-8 sm:h-8 inline-block">
-                                    <div class="h-6 sm:h-8 border-l-2 border-dashed border-gray-300 mt-2"></div>
+                                    <div class="h-6 sm:h-8 border-dashed border-gray-300 mt-2"></div>
                                 </div>
                                 <div class="flex-1">
                                     <p class="font-medium text-gray-700 text-sm sm:text-base">Ditinjau Dosen</p>
-                                    <p class="text-xs sm:text-sm text-gray-500">Dokumen telah dibuka dan ditinjau</p>
+                                    <p class="text-xs sm:text-sm text-gray-500">Dosen meninjau permintaan janji temu Anda</p>
                                     <p class="text-xs sm:text-sm text-gray-500">30 Okt 2024, 09:45</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="flex flex-col items-center mr-3 sm:mr-4">
-                                    <img src="{{ asset('images/Container-ditolak.png') }}" alt="ditolakUlangIkon"
-                                        class="w-7 h-7 sm:w-8 sm:h-8 inline-block">
-                                </div>
-                                <div class="flex-1">
-                                    <p class="font-medium text-gray-700 text-sm sm:text-base">Ditolak</p>
-                                    <p class="text-xs sm:text-sm text-gray-500">Dokumen ditolak</p>
-                                    <p class="text-xs sm:text-sm text-gray-500">30 Okt 2024, 10:15</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-[#FEF2F2] p-3 sm:p-4 rounded-lg border border-[#BEDBFF] mt-2 mb-4">
-                    <div class="flex items-start gap-2 mb-3">
-                        <img src="{{ asset('images/ditolak.png') }}" alt="Catatanditolak"
-                            class="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0">
-                        <span class="text-sm sm:text-base font-semibold text-[#82181A]">Alasan Penolakan</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-[#9F2D00] ml-0 sm:ml-7 leading-relaxed">
-                        Dokumen pendukung tidak lengkap. Diperlukan: <br>1) Surat keterangan dokter/rumah sakit, <br>2) Surat pernyataan orang tua bermaterai, <br>3) Bukti pembayaran UKT semester berjalan. Silakan lengkapi dokumen dan ajukan kembali.
-                    </p>
-                </div>
             </div>
 
             <!-- Tombol Aksi -->
-            <div class="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3 mt-6">
+            <div class="flex flex-col mt-6">
                 <button
-                    class="px-4 sm:px-6 py-2 bg-white border-[0.8px] border-[#0000001A] text-gray-700 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center justify-center gap-2">
-                    <img src="{{ asset('images/mata.png') }}" alt="LihatDokumenIkon"
+                    class="px-4 sm:px-6 py-2 bg-[#EAB308] border-[0.8px] border-[#0000001A] text-[#FFFFFF] rounded-lg hover:bg-[#b89b43] transition duration-200 flex items-center justify-center gap-2">
+                    <img src="{{ asset('images/pindah.png') }}" alt="pindahDokumenIkon"
                         class="w-4 h-4 inline-block">
                     <span>Lihat Dokumen</span>
-                </button>
-                <button
-                    class="px-4 sm:px-6 py-2 bg-[#5CBDB9] text-white rounded-lg hover:bg-teal-600 transition duration-200 flex items-center justify-center gap-2">
-                    <img src="{{ asset('images/downloadPutih.png') }}" alt="UnduhDokumenIkon"
-                        class="w-4 h-4 inline-block">
-                    <span>Unduh Dokumen</span>
                 </button>
             </div>
         </div>

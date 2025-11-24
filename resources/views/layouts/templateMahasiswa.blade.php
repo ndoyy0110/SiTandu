@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Aplikasi Saya')</title>
+    <title>@yield('title', 'Sitandu')</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -33,75 +33,83 @@
     </nav>
     <nav class="bg-[#5CBDB9] ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:grid md:grid-cols-3 items-center py-4 md:py-0 md:h-25 gap-4 md:gap-0">
+            <div class="flex flex-col lg:grid lg:grid-cols-3 items-center py-4 lg:py-0 lg:h-25 gap-4 lg:gap-0">
                 <!-- Logo dan Hamburger Menu -->
-                <div class="flex justify-between items-center w-full md:w-auto md:justify-start">
-                    <h1 class="text-[#4D4D4D] text-3xl md:text-4xl font-noto font-bold">Sitandu</h1>
+                <div class="flex justify-between items-center w-full lg:w-auto lg:justify-start">
+                    <h1 class="text-[#4D4D4D] text-3xl lg:text-4xl font-noto font-bold">Sitandu</h1>
 
-                    <!-- Hamburger Menu Button (Mobile Only) -->
-                    <button id="mobile-menu-button" class="md:hidden text-[#4D4D4D] p-2 rounded-md bg-[#FFDA7A] hover:bg-[#FEF9C2]">
+                    <!-- Hamburger Menu Button (Mobile & Tablet) -->
+                    <button id="mobile-menu-button" class="lg:hidden text-[#4D4D4D] p-2 rounded-md bg-[#FFDA7A] hover:bg-[#FEF9C2]">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
 
-                <!-- Menu (Desktop) -->
-                <div class="hidden md:flex flex-col md:flex-row justify-center items-center w-full md:w-auto">
-                    <div class="flex flex-wrap justify-center gap-2 md:flex-nowrap md:space-x-4">
+                <!-- Menu (Desktop Only - lg breakpoint) -->
+                <div class="hidden lg:flex flex-col lg:flex-row justify-center items-center w-full lg:w-auto">
+                    <div class="flex flex-wrap justify-center gap-2 lg:flex-nowrap lg:space-x-4">
                         <a href="{{ route('mahasiswa.home') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 md:px-4 rounded-md text-sm md:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.home') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 lg:px-4 rounded-md text-sm lg:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.home') ? 'bg-[#FFDA7A]' : '' }} relative z-10 cursor-pointer hover:translate-y-[-2px] hover:shadow-md active:translate-y-0">
                             Home
                         </a>
                         <a href="{{ route('mahasiswa.janjiTemu') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 md:px-4 rounded-md text-sm md:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.janjiTemu') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 lg:px-4 rounded-md text-sm lg:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.janjiTemu') ? 'bg-[#FFDA7A]' : '' }} relative z-10 cursor-pointer hover:translate-y-[-2px] hover:shadow-md active:translate-y-0">
                             Janji Temu
                         </a>
                         <a href="{{ route('mahasiswa.tandaTangan') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 md:px-4 rounded-md text-sm md:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tandaTangan') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 lg:px-4 rounded-md text-sm lg:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tandaTangan') ? 'bg-[#FFDA7A]' : '' }} relative z-10 cursor-pointer hover:translate-y-[-2px] hover:shadow-md active:translate-y-0">
                             Tanda Tangan
                         </a>
                         <a href="{{ route('mahasiswa.tracking') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 md:px-4 rounded-md text-sm md:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tracking') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 lg:px-4 rounded-md text-sm lg:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tracking') ? 'bg-[#FFDA7A]' : '' }} relative z-10 cursor-pointer hover:translate-y-[-2px] hover:shadow-md active:translate-y-0">
                             Tracking
+                        </a>
+                        <a href="{{ route('mahasiswa.history') }}"
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-3 py-2 lg:px-4 rounded-md text-sm lg:text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.history') ? 'bg-[#FFDA7A]' : '' }} relative z-10 cursor-pointer hover:translate-y-[-2px] hover:shadow-md active:translate-y-0">
+                            History
                         </a>
                     </div>
                 </div>
 
-                <!-- Menu Mobile (Hidden by default) -->
-                <div id="mobile-menu" class="hidden md:hidden w-full bg-[#5CBDB9] mt-4 rounded-md shadow-lg">
+                 <!-- Menu Mobile & Tablet (Hidden by default) -->
+                <div id="mobile-menu" class="hidden lg:hidden w-full bg-[#5CBDB9] mt-4 rounded-md shadow-lg">
                     <div class="flex flex-col space-y-2 py-4">
                         <a href="{{ route('mahasiswa.home') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.home') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.home') ? 'bg-[#FFDA7A]' : '' }} relative z-10">
                             Home
                         </a>
                         <a href="{{ route('mahasiswa.janjiTemu') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.janjiTemu') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.janjiTemu') ? 'bg-[#FFDA7A]' : '' }} relative z-10">
                             Janji Temu
                         </a>
                         <a href="{{ route('mahasiswa.tandaTangan') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tandaTangan') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tandaTangan') ? 'bg-[#FFDA7A]' : '' }} relative z-10">
                             Tanda Tangan
                         </a>
                         <a href="{{ route('mahasiswa.tracking') }}"
-                            class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tracking') ? 'bg-[#FFDA7A]' : '' }}">
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.tracking') ? 'bg-[#FFDA7A]' : '' }} relative z-10">
                             Tracking
+                        </a>
+                        <a href="{{ route('mahasiswa.history') }}"
+                           class="text-[#4D4D4D] hover:bg-[#FFDA7A] px-4 py-3 rounded-md text-base font-medium transition duration-200 font-noto whitespace-nowrap {{ request()->routeIs('mahasiswa.history') ? 'bg-[#FFDA7A]' : '' }} relative z-10">
+                            History
                         </a>
                     </div>
                 </div>
 
-                <!-- Pengguna (Desktop) -->
-                <div class="hidden md:flex justify-center md:justify-end w-full md:w-auto relative mt-4 md:mt-0">
+                <!-- Pengguna (Desktop Only) -->
+                <div class="hidden lg:flex justify-center lg:justify-end w-full lg:w-auto relative mt-4 lg:mt-0">
                     <button id="user-menu-button"
-                        class="text-[#4D4D4D] text-sm font-medium bg-[#FFDA7A] hover:bg-[#FEF9C2] rounded-md px-4 py-3 md:px-6 md:py-4 flex items-center w-full md:w-auto justify-center">
+                        class="text-[#4D4D4D] text-sm font-medium bg-[#FFDA7A] hover:bg-[#FEF9C2] rounded-md px-4 py-3 lg:px-6 lg:py-4 flex items-center w-full lg:w-auto justify-center">
                         Selamat datang, Pengguna
                     </button>
                     <!-- Dropdown Menu -->
                     <div id="user-menu"
-                        class="hidden absolute right-0 top-full mt-2 w-full md:w-56 bg-[white] rounded-md shadow-lg py-1 z-10 border border-gray-200">
+                        class="hidden absolute right-0 top-full mt-2 w-full lg:w-56 bg-[white] rounded-md shadow-lg py-1 z-10 border border-gray-200">
                         <div class="px-4 py-2 text-[12px] text-[#4D4D4D] border-b border-gray-100 rounded-md">
-                            <p class="font-bold text-[#4D4D4D]">Dosen TRIK</p>
-                            <p class="text-[#4D4D4D]">dosen.trik@example.com</p>
+                            <p class="font-bold text-[#4D4D4D]">mahasiswa TRIK</p>
+                            <p class="text-[#4D4D4D]">mahasiswa.trik@example.com</p>
                         </div>
                         <div class="border-t border-[#F1F1F1]"></div>
                         <div class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
@@ -111,18 +119,18 @@
                     </div>
                 </div>
 
-                <!-- Pengguna Mobile -->
-                <div class="md:hidden w-full mt-4">
+                <!-- Pengguna Mobile & Tablet -->
+                <div class="lg:hidden w-full mt-4">
                     <button id="user-menu-button-mobile"
                         class="text-[#4D4D4D] text-sm font-medium bg-[#FFDA7A] hover:bg-[#FEF9C2] rounded-md px-4 py-3 flex items-center w-full justify-center">
                         Selamat datang, Pengguna
                     </button>
-                    <!-- Dropdown Menu Mobile -->
+                    <!-- Dropdown Menu Mobile & Tablet -->
                     <div id="user-menu-mobile"
                         class="hidden mt-2 w-full bg-[white] rounded-md shadow-lg py-1 z-10 border border-gray-200">
                         <div class="px-4 py-2 text-[12px] text-[#4D4D4D] border-b border-gray-100 rounded-md">
-                            <p class="font-bold text-[#4D4D4D]">Dosen TRIK</p>
-                            <p class="text-[#4D4D4D]">dosen.trik@example.com</p>
+                            <p class="font-bold text-[#4D4D4D]">mahasiswa TRIK</p>
+                            <p class="text-[#4D4D4D]">mahasiswa.trik@example.com</p>
                         </div>
                         <div class="border-t border-[#F1F1F1]"></div>
                         <div class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
@@ -150,7 +158,7 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Mobile & Tablet Menu Toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
@@ -162,7 +170,7 @@
             menu.classList.toggle('hidden');
         });
 
-        // User Menu Toggle (Mobile)
+        // User Menu Toggle (Mobile & Tablet)
         document.getElementById('user-menu-button-mobile').addEventListener('click', function() {
             const menu = document.getElementById('user-menu-mobile');
             menu.classList.toggle('hidden');
@@ -170,7 +178,7 @@
 
         // Close menus when clicking outside
         document.addEventListener('click', function(event) {
-            // Mobile Menu
+            // Mobile & Tablet Menu
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
 
@@ -186,7 +194,7 @@
                 userMenu.classList.add('hidden');
             }
 
-            // User Menu (Mobile)
+            // User Menu (Mobile & Tablet)
             const userMenuMobile = document.getElementById('user-menu-mobile');
             const userMenuButtonMobile = document.getElementById('user-menu-button-mobile');
 

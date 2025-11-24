@@ -33,4 +33,22 @@ Route::get('/mahasiswa/tandaTangan', [MahasiswaController::class, 'tandaTangan']
 Route::get('/mahasiswa/tracking', [MahasiswaController::class, 'tracking'])->name('mahasiswa.tracking');
 Route::get('/mahasiswa/permintaanTTD', [MahasiswaController::class, 'permintaanTTD'])->name('mahasiswa.permintaanTTD');
 Route::get('/mahasiswa/permintaanJT', [MahasiswaController::class, 'permintaanJT'])->name('mahasiswa.permintaanJT');
+Route::get('/mahasiswa/history', [MahasiswaController::class, 'history'])->name('mahasiswa.history');
+Route::get('/mahasiswa/disetujuiTTD', [MahasiswaController::class, 'disetujuiTTD'])->name('mahasiswa.disetujuiTTD');
+Route::get('/mahasiswa/jadwalUlang', [MahasiswaController::class, 'jadwalUlang'])->name('mahasiswa.jadwalUlang');
+Route::get('/mahasiswa/revisi', [MahasiswaController::class, 'revisi'])->name('mahasiswa.revisi');
+Route::get('/mahasiswa/ditolak', [MahasiswaController::class, 'ditolak'])->name('mahasiswa.ditolak');
+Route::get('mahasiswa/menunggu',[MahasiswaController::class, 'menunggu'])->name('mahasiswa.menunggu');
+Route::get('mahasiswa/disetujuiJT',[MahasiswaController::class, 'disetujuiJT'])->name('mahasiswa.disetujuiJT');
 
+Route::get('/mahasiswa/tracking/selesaiJT', [MahasiswaController::class, 'selesaiTrackingJT'])->name('mahasiswa.selesaiTrackingJT');
+Route::get('/mahasiswa/tracking/menungguJT', [MahasiswaController::class, 'menungguTrackingJT'])->name('mahasiswa.menungguTrackingJT');
+Route::get('/mahasiswa/tracking/jadwalUlang', [MahasiswaController::class, 'jadwalUlangTrackingJT'])->name('mahasiswa.jadwalUlangTrackingJT');
+Route::get('/mahasiswa/tracking/dibaca', [MahasiswaController::class, 'dibacaTrackingTTD'])->name('mahasiswa.dibacaTrackingTTD');
+Route::get('/mahasiswa/tracking/revisi', [MahasiswaController::class, 'revisiTrackingTTD'])->name('mahasiswa.revisiTrackingTTD');
+Route::get('/mahasiswa/tracking/ditolak', [MahasiswaController::class, 'ditolakTrackingTTD'])->name('mahasiswa.ditolakTrackingTTD');
+Route::get('mahasiswa/tracking/selesaiTTD',[MahasiswaController::class, 'selesaiTrackingTTD'])->name('mahasiswa.selesaiTrackingTTD');
+
+Route::get('admin/home', function () {
+    return view('admin.home');
+});

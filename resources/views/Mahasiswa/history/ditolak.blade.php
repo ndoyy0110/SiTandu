@@ -49,33 +49,15 @@
                                 <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/user.png') }}" alt="NamaIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Nama Mahasiswa</span>
+                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Nama Dosen</span>
                                 </div>
                                 <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">Budi Santoso</p>
                             </div>
                             <div class="flex flex-col">
                                 <div class="flex items-center mb-1 sm:mb-0">
-                                    <img src="{{ asset('images/dokumen.png') }}" alt="NIMIkon"
-                                        class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">NIM</span>
-                                </div>
-                                <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">20210001</p>
-                            </div>
-                            <div class="flex flex-col">
-                                <div class="flex items-center mb-1 sm:mb-0">
-                                    <img src="{{ asset('images/email.png') }}" alt="EmailIkon"
-                                        class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Email</span>
-                                </div>
-                                <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5 break-all">
-                                    budi.santoso@student.university.ac.id
-                                </p>
-                            </div>
-                            <div class="flex flex-col">
-                                <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/clock.png') }}" alt="TanggalIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
-                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Tanggal Disetujui</span>
+                                    <span class="ml-2 text-xs sm:text-sm text-[#4A5565]">Tanggal Pengajuan</span>
                                 </div>
                                 <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">30 Oktober 2024, 10:15</p>
                             </div>
@@ -108,7 +90,7 @@
                                 </div>
                                 <div class="flex-1">
                                     <p class="font-medium text-gray-700 text-sm sm:text-base">Dokumen Dikirim</p>
-                                    <p class="text-xs sm:text-sm text-gray-500">Dokumen PDF telah dikirim mahasiswa</p>
+                                    <p class="text-xs sm:text-sm text-gray-500">Form cuti akademik telah Anda kirim</p>
                                     <p class="text-xs sm:text-sm text-gray-500">30 Okt 2024, 09:30</p>
                                 </div>
                             </div>
@@ -120,18 +102,18 @@
                                 </div>
                                 <div class="flex-1">
                                     <p class="font-medium text-gray-700 text-sm sm:text-base">Ditinjau Dosen</p>
-                                    <p class="text-xs sm:text-sm text-gray-500">Dokumen telah dibuka dan ditinjau</p>
+                                    <p class="text-xs sm:text-sm text-gray-500">Dosen telah membuka dan meninjau dokumen</p>
                                     <p class="text-xs sm:text-sm text-gray-500">30 Okt 2024, 09:45</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
                                 <div class="flex flex-col items-center mr-3 sm:mr-4">
-                                    <img src="{{ asset('images/Container-ditolak.png') }}" alt="ditolakUlangIkon"
+                                    <img src="{{ asset('images/Container-ditolak.png') }}" alt="ditolakIkon"
                                         class="w-7 h-7 sm:w-8 sm:h-8 inline-block">
                                 </div>
                                 <div class="flex-1">
                                     <p class="font-medium text-gray-700 text-sm sm:text-base">Ditolak</p>
-                                    <p class="text-xs sm:text-sm text-gray-500">Dokumen ditolak</p>
+                                    <p class="text-xs sm:text-sm text-gray-500">Dokumen ditolak - persyaratan belum lengkap</p>
                                     <p class="text-xs sm:text-sm text-gray-500">30 Okt 2024, 10:15</p>
                                 </div>
                             </div>
@@ -149,22 +131,6 @@
                         Dokumen pendukung tidak lengkap. Diperlukan: <br>1) Surat keterangan dokter/rumah sakit, <br>2) Surat pernyataan orang tua bermaterai, <br>3) Bukti pembayaran UKT semester berjalan. Silakan lengkapi dokumen dan ajukan kembali.
                     </p>
                 </div>
-            </div>
-
-            <!-- Tombol Aksi -->
-            <div class="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3 mt-6">
-                <button
-                    class="px-4 sm:px-6 py-2 bg-white border-[0.8px] border-[#0000001A] text-gray-700 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center justify-center gap-2">
-                    <img src="{{ asset('images/mata.png') }}" alt="LihatDokumenIkon"
-                        class="w-4 h-4 inline-block">
-                    <span>Lihat Dokumen</span>
-                </button>
-                <button
-                    class="px-4 sm:px-6 py-2 bg-[#5CBDB9] text-white rounded-lg hover:bg-teal-600 transition duration-200 flex items-center justify-center gap-2">
-                    <img src="{{ asset('images/downloadPutih.png') }}" alt="UnduhDokumenIkon"
-                        class="w-4 h-4 inline-block">
-                    <span>Unduh Dokumen</span>
-                </button>
             </div>
         </div>
     </main>

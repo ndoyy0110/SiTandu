@@ -44,7 +44,7 @@
                     <h2 class="text-base sm:text-lg font-semibold text-[#101828] mb-3">Informasi Dokumen</h2>
                     <div class="bg-white p-3 sm:p-4 rounded-lg border border-white">
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                            <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="flex flex-col">
                                 <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/user.png') }}" alt="NamaIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
@@ -52,7 +52,7 @@
                                 </div>
                                 <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">Budi Santoso</p>
                             </div>
-                            <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="flex flex-col">
                                 <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/dokumen.png') }}" alt="NIMIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
@@ -60,7 +60,7 @@
                                 </div>
                                 <p class="ml-0 sm:ml-8 font-medium text-sm sm:text-base text-[#0A0A0A] mt-0 sm:mt-0.5">20210001</p>
                             </div>
-                            <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="flex flex-col">
                                 <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/email.png') }}" alt="EmailIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
@@ -70,7 +70,7 @@
                                     budi.santoso@student.university.ac.id
                                 </p>
                             </div>
-                            <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="flex flex-col">
                                 <div class="flex items-center mb-1 sm:mb-0">
                                     <img src="{{ asset('images/clock.png') }}" alt="TanggalIkon"
                                         class="w-4 h-4 sm:w-5 sm:h-5 inline-block">
